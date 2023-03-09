@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
     <header>
       <h1>Chytrý dům</h1>
     </header>
@@ -9,7 +8,6 @@
      
       <OneDetail :room="rooms[roomDetail]" :id="roomDetail" @switch-light="switchLight" />
     </main>
-  </div>
 </template>
 
 <script>
@@ -22,32 +20,32 @@ export default {
     return {
       rooms: [
         {
-          nazev: "Obývací pokoj",
-          zapnuto: false,
+          name: "Obývací pokoj",
+          lightOn: false,
         },
         {
-          nazev: "Ložnice",
-          zapnuto: true,
+          name: "Ložnice",
+          lightOn: true,
         },
         {
-          nazev: "Dětský pokoj",
-          zapnuto: false,
+          name: "Dětský pokoj",
+          lightOn: false,
         },
         {
-          nazev: "Koupelna",
-          zapnuto: false,
+          name: "Koupelna",
+          lightOn: false,
         },
         {
-          nazev: "Kuchyně",
-          zapnuto: true,
+          name: "Kuchyně",
+          lightOn: true,
         },
         {
-          nazev: "Chodba",
-          zapnuto: false,
+          name: "Chodba",
+          lightOn: false,
         },
         {
-          nazev: "Záchůdek",
-          zapnuto: false,
+          name: "Záchůdek",
+          lightOn: false,
         },
       ],
 
@@ -60,7 +58,7 @@ export default {
       this.roomDetail = index;
     },
     switchLight(index) {
-      this.rooms[index].zapnuto = !this.rooms[index].zapnuto;
+      this.rooms[index].lightOn = !this.rooms[index].lightOn;
     }
   },
 };

@@ -1,7 +1,7 @@
 /* Google font */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i&display=swap&subset=latin-ext');
 
-/* Moderní box model */
+
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
@@ -48,13 +48,13 @@ main {
 }
 
 
-/* seznam svetel */
-.svetla {
+/* lights component */
+.lights {
 	overflow: auto;
 	padding: 20px;
 }
 
-.svetlo {
+.light {
 	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
@@ -66,33 +66,33 @@ main {
 	border: 2px solid white;
 }
 
-.svetlo:hover {
+.light:hover {
 	transform: translateY(-3px);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 	border-color: #0099ff;
 }
 
-.svetlo:active {
+.light:active {
 	transform: translateY(0);
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 	border-color: #0099ff;
 }
 
-.svetlo-ikona {
+.light__icon {
 	padding: 10px 20px;
 }
 
-.svetlo-ikona img {
+.light__icon img {
 	width: 40px;
 }
 
-.svetlo-nazev {
+.light__name {
 	flex: 1;
 	padding: 10px 20px 10px 0;
 	font-weight: bold;
 }
 
-/* detail */
+/* detail component */
 
 .detail {
 	display: flex;
@@ -102,7 +102,7 @@ main {
 	background: #013565 url('/images/header-bg.jpg') center/cover no-repeat;
 }
 
-.detail-inner {
+.detail__inner {
 	width: 400px;
 	min-height: 300px;
 	padding: 30px;
@@ -114,24 +114,24 @@ main {
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-.detail-ikona {
+.detail__icon {
 	text-align: center;
 }
 
-.detail-ikona img {
+.detail__icon img {
 	width: 80px;
 }
 
-.detail-nazev {
+.detail__name {
 	text-align: center;
 	margin: 30px 0;
 }
 
-.detail-buttons {
+.detail__buttons {
 	display: flex;
 }
 
-.detail-buttons button {
+.detail__buttons button {
 	flex: 0 0 50%;
 	border: 0;
 	outline: 0;
@@ -142,15 +142,15 @@ main {
 	cursor: pointer;
 }
 
-.detail-buttons button:first-child {
+.detail__buttons button:first-child {
 	border-radius: 5px 0 0 5px;
 }
 
-.detail-buttons button:last-child {
+.detail__buttons button:last-child {
 	border-radius: 0 5px 5px 0;
 }
 
-.detail-buttons button.aktivni {
+.detail__buttons button.active {
 	background-color: #0099ff;
 	color: white;
 }
