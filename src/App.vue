@@ -1,13 +1,12 @@
 <template>
-    <header>
-      <h1>Chytrý dům</h1>
-    </header>
+  <header>
+    <h1>Chytrý dům</h1>
+  </header>
 
-    <main>
-      <AllLights :rooms="rooms" @change-room="setDetail" />
-     
-      <OneDetail :room="rooms[roomDetail]" :id="roomDetail" @switch-light="switchLight" />
-    </main>
+  <main>
+    <OneDetail :room="rooms[roomDetail]" :id="roomDetail" @switch-light="switchLight" />
+    <AllLights :rooms="rooms" @change-room="setDetail" />
+  </main>
 </template>
 
 <script>
